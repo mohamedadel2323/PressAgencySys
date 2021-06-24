@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PressAgencySysModelStoreContainer" CdmEntityContainer="PressAgencySysEntities">
+    <EntitySetMapping Name="articlePosts">
+      <EntityTypeMapping TypeName="PressAgencySysModel.articlePost">
+        <MappingFragment StoreEntitySet="articlePost">
+          <ScalarProperty Name="articleID" ColumnName="articleID" />
+          <ScalarProperty Name="editorID" ColumnName="editorID" />
+          <ScalarProperty Name="articleTitle" ColumnName="articleTitle" />
+          <ScalarProperty Name="articlebody" ColumnName="articlebody" />
+          <ScalarProperty Name="postCreationDate" ColumnName="postCreationDate" />
+          <ScalarProperty Name="articleType" ColumnName="articleType" />
+          <ScalarProperty Name="isAccepted" ColumnName="isAccepted" />
+          <ScalarProperty Name="NumberOfViewers" ColumnName="NumberOfViewers" />
+          <ScalarProperty Name="NumberOfLikes" ColumnName="NumberOfLikes" />
+          <ScalarProperty Name="NumberOfDislikes" ColumnName="NumberOfDislikes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DisLikes">
+      <EntityTypeMapping TypeName="PressAgencySysModel.DisLike">
+        <MappingFragment StoreEntitySet="DisLike">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="articleID" ColumnName="articleID" />
+          <ScalarProperty Name="userID" ColumnName="userID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LikesPosts">
+      <EntityTypeMapping TypeName="PressAgencySysModel.LikesPost">
+        <MappingFragment StoreEntitySet="LikesPost">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="articleID" ColumnName="articleID" />
+          <ScalarProperty Name="userID" ColumnName="userID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="photos">
+      <EntityTypeMapping TypeName="PressAgencySysModel.photo">
+        <MappingFragment StoreEntitySet="photo">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="path" ColumnName="path" />
+          <ScalarProperty Name="articleid" ColumnName="articleid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="roles">
+      <EntityTypeMapping TypeName="PressAgencySysModel.role">
+        <MappingFragment StoreEntitySet="role">
+          <ScalarProperty Name="roleID" ColumnName="roleID" />
+          <ScalarProperty Name="roleName" ColumnName="roleName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="users">
+      <EntityTypeMapping TypeName="PressAgencySysModel.user">
+        <MappingFragment StoreEntitySet="user">
+          <ScalarProperty Name="userID" ColumnName="userID" />
+          <ScalarProperty Name="userName" ColumnName="userName" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="confirmPass" ColumnName="confirmPass" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="photo" ColumnName="photo" />
+          <ScalarProperty Name="roleID" ColumnName="roleID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

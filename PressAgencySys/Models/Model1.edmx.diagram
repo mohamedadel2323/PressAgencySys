@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="9fdba4359aa44f16920002c1b0c33060" Name="Diagram1">
+        <EntityTypeShape EntityType="PressAgencySysModel.articlePost" Width="1.5" PointX="5.25" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="PressAgencySysModel.DisLike" Width="1.5" PointX="7.5" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="PressAgencySysModel.LikesPost" Width="1.5" PointX="7.5" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="PressAgencySysModel.photo" Width="1.5" PointX="7.5" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PressAgencySysModel.role" Width="1.5" PointX="0.75" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="PressAgencySysModel.user" Width="1.5" PointX="3" PointY="3" IsExpanded="true" />
+        <AssociationConnector Association="PressAgencySysModel.FK__articlePo__edito__3C69FB99" ManuallyRouted="false" />
+        <AssociationConnector Association="PressAgencySysModel.FK__DisLike__article__5070F446" ManuallyRouted="false" />
+        <AssociationConnector Association="PressAgencySysModel.FK__LikesPost__artic__5441852A" ManuallyRouted="false" />
+        <AssociationConnector Association="PressAgencySysModel.FK__photo__articleid__4D94879B" ManuallyRouted="false" />
+        <AssociationConnector Association="PressAgencySysModel.FK__DisLike__userID__5165187F" ManuallyRouted="false" />
+        <AssociationConnector Association="PressAgencySysModel.FK__LikesPost__userI__5535A963" ManuallyRouted="false" />
+        <AssociationConnector Association="PressAgencySysModel.FK__user__roleID__398D8EEE" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

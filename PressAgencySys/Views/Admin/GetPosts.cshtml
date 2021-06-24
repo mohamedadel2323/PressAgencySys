@@ -1,0 +1,75 @@
+﻿@model IEnumerable<PressAgencySys.Models.articlePost>
+
+@{
+    ViewBag.Title = "GetPosts";
+    Layout = "~/Views/Shared/_DashboardLayout.cshtml";
+}
+
+<h2>GetPosts</h2>
+
+
+<table class="table table-striped table-bordered table-hover">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.articleTitle)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.articlebody)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.postCreationDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.articleType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.user.userName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumberOfViewers)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumberOfLikes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumberOfDislikes)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.articleTitle)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.articlebody)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.postCreationDate)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.articleType)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.user.userName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.NumberOfViewers)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.NumberOfLikes)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.NumberOfDislikes)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "EditPost", new { id = item.articleID }, new { @class = "btn btn-success" }) |
+        @Html.ActionLink("Details", "GetPostDetails", new { id = item.articleID }, new { @class = "btn btn-success" }) |
+        @Html.ActionLink("Delete", "DeletePost", new { id = item.articleID }, new { @class = "btn btn-danger" })
+    </td>
+</tr>
+}
+
+</table>

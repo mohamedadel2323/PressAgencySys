@@ -1,0 +1,92 @@
+﻿@model PressAgencySys.Models.articlePost
+
+@{
+    ViewBag.Title = "GetPostDetails";
+    Layout = "~/Views/Shared/_DashboardLayout.cshtml";
+}
+
+<h2>GetPostDetails</h2>
+
+<div>
+    <h4>articlePost</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.articleTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.articleTitle)
+        </dd>
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.articlebody)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.articlebody)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.postCreationDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.postCreationDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.articleType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.articleType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.isAccepted)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.isAccepted)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.user.userName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.user.userName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumberOfViewers)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumberOfViewers)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumberOfLikes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumberOfLikes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumberOfDislikes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumberOfDislikes)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "EditPost", new { id = Model.articleID }) |
+    @Html.ActionLink("Back to List", "GetPosts")
+</p>

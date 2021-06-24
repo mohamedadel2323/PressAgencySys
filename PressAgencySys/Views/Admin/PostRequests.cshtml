@@ -1,0 +1,54 @@
+﻿@model IEnumerable<PressAgencySys.Models.articlePost>
+
+@{
+    ViewBag.Title = "PostRequests";
+    Layout = "~/Views/Shared/_DashboardLayout.cshtml";
+}
+
+<h2>Post Requests</h2>
+
+
+<table class="table table-striped table-bordered table-hover">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.articleTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.articlebody)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.postCreationDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.articleType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.editorID)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.articleTitle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.articlebody)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.postCreationDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.articleType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.editorID)
+        </td>
+        <td>
+            @Html.ActionLink("Accept", "AcceptPosts", new { id=item.articleID}, new {@class = "btn btn-success" })
+        </td>
+    </tr>
+}
+
+</table>
